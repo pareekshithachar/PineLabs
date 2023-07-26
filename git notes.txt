@@ -1,0 +1,44 @@
+git help config
+git init
+git config --global user.name 'Pareekshith'
+git config --global user.email 'achar.pareekshith@gmail.com'
+git config --list
+touch file1.txt
+git status
+git add .
+git rm --cached file1.txt ( to remove it from staging area to working directory again)
+git restore file2.txt (if you do add . and then change the file but want to revert back to staging area file)
+git log
+git log --pretty=oneline
+//reset is used to remove from commit to staging area
+git reset 4c8c37b1a2cc000a4e6e5954865ac507eafcf1a2 (this is commit ID, this just removes from commit but doesnt erase files)
+git reset --hard Head~1 (removes data till last commit)
+
+git revert 4c8c37b1a2cc000a4e6e5954865ac507eafcf1a2 does same job as reset but it shows the log  in --pretty=oneline
+
+git branch -M main
+git pull origin master
+
+git branch bangalore
+
+git checkout bangalore
+git ls-files
+
+
+make sure to do git add . and git commit in bangalore branch
+git merge bangalore (in main branch)
+git checkout bangalore
+git push origin bangalore
+
+
+git branch -d bangalore //removes from pc
+git push origin --delete bangalore // removes from repo
+
+git stash -> removes changes till last commit
+git stash apply -> adds changes back
+git stash push -m 'adding geature1'
+git stash list
+git stash pop 0-> gives changes of 0 index
+git stash drop 1-> drops the stash
+
+git clones link_of_repo
